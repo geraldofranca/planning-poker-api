@@ -1,7 +1,7 @@
 import { Router } from 'express'
+import { adaptRoute } from '../adapters/express-route-adapter'
+import { makeAddUserController } from '../factories/controllers/add-user-controller-factory'
 
 export default (router: Router): void => {
-  router.get('/users', (req, res) => {
-    res.json('Users')
-  })
+  router.post('/users', adaptRoute(makeAddUserController()))
 }
