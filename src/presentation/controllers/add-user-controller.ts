@@ -22,7 +22,6 @@ export class AddUserController implements Controller {
       })
       return noContent()
     } catch (error) {
-      console.info('error controle', error.stack)
       return serverError(error)
     }
   }

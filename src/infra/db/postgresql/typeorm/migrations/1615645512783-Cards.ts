@@ -15,7 +15,7 @@ export class Cards1615645512783 implements MigrationInterface {
           },
           {
             name: 'value',
-            type: 'varchar'
+            type: 'integer'
           },
           {
             name: 'created_at',
