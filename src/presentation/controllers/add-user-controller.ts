@@ -1,8 +1,8 @@
-import { AddUser } from "../../domain/usescases/user/add-user";
-import { badRequest, noContent, serverError } from "../helpers/http-helper";
-import { Controller } from "../protocols/controller";
-import { HttpResponse } from "../protocols/http";
-import { Validation } from "../protocols/validation";
+import { AddUser } from '../../domain/usescases/user/add-user'
+import { badRequest, noContent, serverError } from '../helpers/http-helper'
+import { Controller } from '../protocols/controller'
+import { HttpResponse } from '../protocols/http'
+import { Validation } from '../protocols/validation'
 
 export class AddUserController implements Controller {
   constructor (
