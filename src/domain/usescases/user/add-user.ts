@@ -1,4 +1,4 @@
-import { UserModel } from "../../models/user";
+import { UserModel } from '../../models/user'
 
 export interface AddUser {
   add: (data: AddUser.Params) => Promise<UserModel>
