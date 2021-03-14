@@ -1,5 +1,7 @@
 import { userPath } from './paths/user-path'
+import { cardPath } from './paths/card-path'
 import { UserParams } from './schemas/user-params'
+import { CardParams } from './schemas/card-params'
 
 export default {
   openapi: '3.0.0',
@@ -27,9 +29,11 @@ export default {
     description: 'APIs relacionadas a história de usuário'
   }],
   paths: {
-    '/users': userPath
+    '/users': userPath,
+    '/cards': cardPath
   },
   schemas: {
-    UserParams
+    UserParams,
+    CardParams
   }
 }
