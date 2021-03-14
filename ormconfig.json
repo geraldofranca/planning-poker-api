@@ -1,10 +1,10 @@
 {
   "type": "postgres",
-  "host": "ziggy.db.elephantsql.com",
+  "host": "queenie.db.elephantsql.com",
   "port": 5432,
-  "username": "ltgyqeih",
-  "password": "XBKchDsYhv4US30oqVqOFKYtw0cZtYaV",
-  "database": "ltgyqeih",
+  "username": "wvrjaprf",
+  "password": "Zl4qYIdjv4YrPS72hBZy9VTvSgJ6aVxi",
+  "database": "wvrjaprf",
   "entities": [
     "./src/infra/db/postgresql/typeorm/entities/*.ts"
   ],

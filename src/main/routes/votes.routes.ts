@@ -1,7 +1,7 @@
 import { Router } from 'express'
+import { adaptRoute } from '../adapters/express-route-adapter'
+import { makeAddVoteController } from '../factories/controllers/add-vote-controller-factory'
 
 export default (router: Router): void => {
-  router.get('/votes', (req, res) => {
-    res.json('Votes')
-  })
+  router.post('/votes', adaptRoute(makeAddVoteController()))
 }
