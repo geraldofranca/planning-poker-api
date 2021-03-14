@@ -11,7 +11,7 @@ import User from './user'
 import UserStories from './user-stories'
 
 @Entity('votes')
-class Votes {
+class Vote {
   @PrimaryGeneratedColumn('uuid')
   id: string
 
@@ -40,4 +40,4 @@ class Votes {
   created_at: Date
 }
 
-export default Votes
+export default Vote
