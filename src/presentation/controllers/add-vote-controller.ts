@@ -1,3 +1,4 @@
+import { PublishInQueue } from '../../data/protocols/notifications/mqtt/publish-in-queue'
 import { AddVote } from '../../domain/usescases/vote/add-vote'
 import { badRequest, noContent, serverError } from '../helpers/http-helper'
 import { Controller } from '../protocols/controller'
@@ -7,7 +8,8 @@ import { Validation } from '../protocols/validation'
 export class AddVoteController implements Controller {
   constructor (
     private readonly validation: Validation,
-    private readonly addVote: AddVote) {}
+    private readonly addVote: AddVote,
+    private readonly publishInQueue: PublishInQueue) {}
 
   async handle (request: AddVoteController.Request): Promise<HttpResponse> {
     try {
@@ -18,6 +20,9 @@ export class AddVoteController implements Controller {
       await this.addVote.add({
         ...request,
         created_at: new Date()
+      })
+      this.publishInQueue.publish({
+        message: 'Novo voto na história'
       })
       return noContent()
     } catch (error) {

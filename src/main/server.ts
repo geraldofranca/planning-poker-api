@@ -1,5 +1,4 @@
 import { createConnection } from 'typeorm'
-// import app from './config/app'
 
 createConnection()
   .then(async () => {
