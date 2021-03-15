@@ -7,7 +7,8 @@ class PublishService implements PublishInQueue {
   ) {}
 
   async publish (data: PublishInQueue.Params): Promise<PublishInQueue.Result> {
-    return this.mqttServer.channel.sendToQueue(this.queue, Buffer.from(data.message))
+    // return this.mqttServer.channel.sendToQueue(this.queue, Buffer.from(data.message))
+    return this.mqttServer.channel.publish('allvotes', 'allvotesroute', Buffer.from(data.message))
   }
 }
 
