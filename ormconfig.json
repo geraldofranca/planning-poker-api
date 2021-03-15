@@ -6,12 +6,12 @@
   "password": "Zl4qYIdjv4YrPS72hBZy9VTvSgJ6aVxi",
   "database": "wvrjaprf",
   "entities": [
-    "./src/infra/db/postgresql/typeorm/entities/*.ts"
+    "./dist/infra/db/postgresql/typeorm/entities/*.js"
   ],
   "migrations": [
-    "./src/infra/db/postgresql/typeorm/migrations/*.ts"
+    "./dist/infra/db/postgresql/typeorm/migrations/*.js"
   ],
   "cli": {
-    "migrationsDir": "./src/infra/db/postgresql/typeorm/migrations"
+    "migrationsDir": "./dist/infra/db/postgresql/typeorm/migrations"
   }
 }

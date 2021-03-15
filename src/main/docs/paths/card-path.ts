@@ -33,16 +33,6 @@ export const cardPath = {
     tags: ['Cards'],
     summary: 'API para retornar as cartas cadastradas',
     description: 'Essa rota é aberta',
-    requestBody: {
-      required: true,
-      content: {
-        'application/json': {
-          schema: {
-            $ref: '#/schemas/CardDeleteParams'
-          }
-        }
-      }
-    },
     responses: {
       200: {
         description: 'Sucesso',
@@ -72,6 +62,16 @@ export const cardPath = {
     tags: ['Cards'],
     summary: 'API para apagar uma carta',
     description: 'Essa rota é aberta',
+    requestBody: {
+      required: true,
+      content: {
+        'application/json': {
+          schema: {
+            $ref: '#/schemas/CardDeleteParams'
+          }
+        }
+      }
+    },
     responses: {
       200: {
         description: 'Sucesso',
