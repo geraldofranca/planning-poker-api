@@ -16,7 +16,8 @@ export class AddUserStoriesController implements Controller {
         return badRequest(error)
       }
       await this.addUserStories.add({
-        ...request
+        ...request,
+        created_at: new Date()
       })
       return noContent()
     } catch (error) {
@@ -28,5 +29,7 @@ export class AddUserStoriesController implements Controller {
 export namespace AddUserStoriesController {
   export type Request = {
     description: string
+    created_at: Date
+    updated_at?: Date
   }
 }
