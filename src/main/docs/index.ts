@@ -1,7 +1,7 @@
 import { userPath } from './paths/user-path'
 import { cardPath } from './paths/card-path'
 import { UserParams } from './schemas/user-params'
-import { CardParams } from './schemas/card-params'
+import { CardParams, CardResult, CardDeleteParams } from './schemas/card-params'
 
 export default {
   openapi: '3.0.0',
@@ -27,6 +27,9 @@ export default {
   },{
     name: 'User Stories',
     description: 'APIs relacionadas a história de usuário'
+  },{
+    name: 'Votes',
+    description: 'APIs relacionadas aos votos nas histórias de usuário'
   }],
   paths: {
     '/users': userPath,
@@ -34,6 +37,8 @@ export default {
   },
   schemas: {
     UserParams,
-    CardParams
+    CardParams,
+    CardResult,
+    CardDeleteParams
   }
 }

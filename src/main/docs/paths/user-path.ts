@@ -17,6 +17,12 @@ export const userPath = {
       204: {
         description: 'Sucesso',
         content: ''
+      },
+      400: {
+        description: 'badRequest'
+      },
+      500: {
+        description: 'serverError'
       }
     }
   }
