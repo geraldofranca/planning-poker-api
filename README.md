@@ -26,6 +26,11 @@ $ npm i
 $ npm run dev:server
 ```
 
+Endereço da api: http://localhost:3100/api
+
+### Documentação da API
+A API está documentada com o swagger. Pode ser acessado no link http://localhost:3100/api-docs/
+
 ### Autor
 Geraldo França 👋🏽 Entre em contato!
 
