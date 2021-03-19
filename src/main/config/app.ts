@@ -1,4 +1,6 @@
 import 'reflect-metadata'
+import 'dotenv/config'
+
 import express from 'express'
 import setupMiddlewares from './middlewares'
 import setupSwagger from './swagger'
